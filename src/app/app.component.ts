@@ -1,13 +1,22 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'ishva-stack-demo';
+  theStack: string[] = ['Data 1', 'Data 2', 'Data 3'];
+  title='Ishva Stack Demo';
+
+  addNew() {
+    const freshData = `Data ${this.theStack.length + 1}`;
+    this.theStack.push(freshData);
+  }
+
+  remove() {
+    if (this.theStack.length > 0) {
+      this.theStack.pop();
+    }
+  }
 }
