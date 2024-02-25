@@ -3,8 +3,8 @@
 <div style="text-align: center;">
   <h2>Stack Demo</h2>
   <div *ngIf="theStack.length === 0">Stack is empty</div>
-  <div class="stack" *ngFor="let element of theStack.reverse()">{{ element }}</div>
-  <button class="btn"(click)="addNew()">Push</button>
-  <button class="btn" (click)="remove()">Pop</button>
+  <div class="data-stack" *ngFor="let element of theStack.reverse()">{{ element }}</div>
+  <button class="push-button" (click)="addNew()">Push</button>
+  <button class="pop-button" (click)="remove()">Pop</button>
 </div>
 <app-footer></app-footer>
